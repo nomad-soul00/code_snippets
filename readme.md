@@ -1,4 +1,16 @@
 
+# Code Snippets 
+
+#### List of Handy code Snippets and functions..
+
+
+
+
+
+![Logo](https://img.icons8.com/?size=50&id=108784&format=png&color=000000)
+## 
+
+
 #### Onchange functnion for fields in react.
 
 ```
