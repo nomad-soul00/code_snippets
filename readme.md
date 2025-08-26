@@ -19,7 +19,7 @@
     }
 
 ```
-#### sending data from forntend to backend in react
+#### sending data from forntend to backend in react && sme for fetching data from backend
 ```
 const [credentials, setcredentials] = useState({name: '', email: '', password: '',geolocation: '', phoneNumber: ''})
 
@@ -46,7 +46,7 @@ const [credentials, setcredentials] = useState({name: '', email: '', password: '
         }
     }
 ```
-### Hashing password with bcrypt
+#### Hashing password with bcrypt
 ```
 import bcrypt from 'bcrypt';
 
@@ -54,7 +54,22 @@ const salt = await bcrypt.genSalt(10);
 const securePassword = await bcrypt.hash(req.body.password, salt);
 
 ```
+#### fetching a collection from a prebuilt database.
+```
+await mongoose.connect(mongoURI)
+console.log("Connected to MongoDB successfully");
+const fetched_data = await mongoose.connection.db.collection('food_items').find({}).toArray();
+console.log(fetched_data);
+```
+#### search input using filter
+```
+<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
 
+ (foodItem.length !== 0) && foodItem.filter((item) => 
+    (item.name.toLowerCase().includes(search.toLocaleLowerCase())))
+
+
+```
    
  
     
