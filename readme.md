@@ -71,5 +71,43 @@ console.log(fetched_data);
 
 ```
    
- 
-    
+####  reduce method in js
+```
+let totalPrice = data.reduce((total,food)=> total+food.price, 0)
+
+## total is like a varible with intial value = 0
+
+```
+
+####  Scroll on load using ref hook
+```
+import useRef
+
+const scrollEnd = useRef();
+
+ useEffect(() => {
+    const timeout = setTimeout(() => {
+      scrollEnd.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+
+    return () => clearTimeout(timeout);
+  }, [selectedUser]);
+
+
+
+return(
+    <div ref={scrollEnd}></div>
+)
+
+```
+---
+
+![Logo](https://img.icons8.com/?size=100&id=54087&format=png&color=000000) ![Logo](https://img.icons8.com/?size=100&id=Lk2Q5FRKDWGI&format=png&color=000000)
+---
+### express built in middlewares and configuration settings.
+```
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
+app.set('views', path.resolve('./views'))
+```
